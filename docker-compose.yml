@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  movies-angular:
+    image: "movies-angular"
+    build: .
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./movies-security-docker-angular:/usr/src/app
+      - node_modules:/usr/src/app/node_modules
+volumes:
+  node_modules:
