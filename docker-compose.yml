@@ -6,7 +6,7 @@ services:
     ports:
       - "4200:80"
     volumes:
-      - ./movies-security-docker-angular:/usr/src/app
-      - node_modules:/usr/src/app/node_modules
+      - "./movies-security-docker-angular:/usr/src/app"
+      - "node_modules:/usr/src/app/node_modules"
 volumes:
   node_modules:
