@@ -1,1 +1,31 @@
-<p>movie-list works!</p>
+<section>
+  <h5>Filmide andmebaas</h5>
+  <div>
+    <div>
+      <button (click)="getAllMovies()">Filmid</button>
+      <button class="btnRight" *ngIf="showHeader" (click)="onCloseList()">Sulge</button>
+    </div>
+    <div *ngIf="showHeader; else getTableMessage">
+      <table class="table table-hover">
+        <thead>
+        <tr>
+          <th *ngFor="let column of headers">
+            {{column}}
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let movie of movies; let i = index">
+          <th>{{i + 1}}</th>
+          <td>{{movie.name}}</td>
+          <td>{{movie.description}}</td>
+          <td>{{movie.category}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <ng-template #getTableMessage>
+    <p>Kliki nimekirja kuvamiseks</p>
+  </ng-template>
+</section>

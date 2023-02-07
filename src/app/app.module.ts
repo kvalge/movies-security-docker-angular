@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {RouterLinkActive, RouterOutlet} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
+import {HttpClientModule} from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
@@ -10,6 +11,8 @@ import { MoviesComponent } from './pages/movies/movies.component';
 import { RentalComponent } from './pages/rental/rental.component';
 import { MovieListComponent } from './pages/movies/movie-list/movie-list.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
+import {DataStorageService} from "./services/data-storage.service";
+import {MovieService} from "./services/movie.service";
 
 @NgModule({
   declarations: [
@@ -25,9 +28,10 @@ import { CategoriesComponent } from './pages/categories/categories.component';
     BrowserModule,
     RouterOutlet,
     RouterLinkActive,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DataStorageService, MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+
+import {MovieModel} from "../movie.model";
+import {MovieService} from "../../../services/movie.service";
+import {DataStorageService} from "../../../services/data-storage.service";
 
 @Component({
   selector: 'app-movie-list',
@@ -7,9 +11,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieListComponent implements OnInit {
 
-  constructor() { }
+  movies: MovieModel[];
+  headers = ['#', 'Pealkiri', 'Kirjeldus', 'Kategooria']
+  showHeader: boolean = false;
+  onClose: boolean = false;
+
+  constructor(private movieService: MovieService, private dataStorageService: DataStorageService) {
+  }
 
   ngOnInit(): void {
   }
 
+  getAllMovies() {
+    this.showHeader = true;
+    this.dataStorageService.getAllMovies();
+    this.movies = this.movieService.getMovies();
+  }
+
+  onCloseList() {
+    this.showHeader = false;
+  }
 }
