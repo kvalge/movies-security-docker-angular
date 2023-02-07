@@ -8,6 +8,8 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { MoviesComponent } from './pages/movies/movies.component';
 import { RentalComponent } from './pages/rental/rental.component';
+import { MovieListComponent } from './pages/movies/movie-list/movie-list.component';
+import { CategoriesComponent } from './pages/categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { RentalComponent } from './pages/rental/rental.component';
     FooterComponent,
     MoviesComponent,
     RentalComponent,
+    MovieListComponent,
+    CategoriesComponent,
   ],
   imports: [
     BrowserModule,
