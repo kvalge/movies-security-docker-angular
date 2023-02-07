@@ -1,4 +1,13 @@
-# Movies-Security-Docker-Angular
+# Movie Rental Project
+
+Goal is to create movie rental application which allows to manage authenticated and authorized users, categories, movies and rental data.  
+Front-end project to github.com/kvalge/movies-security-docker-spring.  
+Used IDE: IntelliJ 2023.1 EAP.
+
+### Docker
+Created Dockerfile and docker-compose.yml to containerize application.
+
+-------------------------------------------
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.
 
