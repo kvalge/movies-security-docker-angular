@@ -9,8 +9,8 @@ Created Dockerfile and docker-compose.yml to containerize application.
 
 ### Structure and Functionalities
 layout: header and footer for every page.
-pages: movie-list - returns all movies from database.
-authentication: register - adds new user.
+pages: movie-list - returns all movies from database on 'Filmid' page.
+authentication: register - adds new authenticated user with the role 'USER' to the database.
 
 
 -------------------------------------------
