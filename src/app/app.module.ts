@@ -14,6 +14,9 @@ import { CategoriesComponent } from './pages/categories/categories.component';
 import {DataStorageService} from "./services/data-storage.service";
 import {MovieService} from "./services/movie.service";
 import { RegisterComponent } from './authentication/register/register.component';
+import { LoginComponent } from './authentication/login/login.component';
+import {AuthService} from "./services/auth.service";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -25,15 +28,17 @@ import { RegisterComponent } from './authentication/register/register.component'
     MovieListComponent,
     CategoriesComponent,
     RegisterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     RouterOutlet,
     RouterLinkActive,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [DataStorageService, MovieService],
+  providers: [DataStorageService, MovieService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
