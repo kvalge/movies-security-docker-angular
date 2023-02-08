@@ -13,6 +13,7 @@ import { MovieListComponent } from './pages/movies/movie-list/movie-list.compone
 import { CategoriesComponent } from './pages/categories/categories.component';
 import {DataStorageService} from "./services/data-storage.service";
 import {MovieService} from "./services/movie.service";
+import { RegisterComponent } from './authentication/register/register.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {MovieService} from "./services/movie.service";
     RentalComponent,
     MovieListComponent,
     CategoriesComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
