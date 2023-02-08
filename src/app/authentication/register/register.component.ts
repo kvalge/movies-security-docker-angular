@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {AuthService} from "../../services/auth.service";
 import {Router} from "@angular/router";
@@ -12,19 +12,21 @@ export class RegisterComponent implements OnInit {
 
   userForm: FormGroup;
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router) {
+  }
 
   ngOnInit(): void {
     this.userForm = new FormGroup({
+      name: new FormControl(null, Validators.required),
       username: new FormControl(null, Validators.required),
+      email: new FormControl(null, Validators.required),
       password: new FormControl(null, Validators.required),
     });
   }
 
-    onRegister() {
-      this.authService.register(this.userForm.value);
-      this.userForm.reset();
-      this.router.navigate(['login']);
-    }
-
+  onRegister() {
+    this.authService.register(this.userForm.value);
+    this.userForm.reset();
+    this.router.navigate(['login']);
+  }
 }

@@ -1,11 +1,17 @@
 # Movie Rental Project
 
-Goal is to create movie rental application which allows to manage authenticated and authorized users, categories, movies and rental data.  
+Goal is to create a movie rental application which allows to manage authenticated and authorized users, categories, movies and rental data.  
 Front-end project to github.com/kvalge/movies-security-docker-spring.  
 Used IDE: IntelliJ 2023.1 EAP.
 
 ### Docker
 Created Dockerfile and docker-compose.yml to containerize application.
+
+### Structure and Functionalities
+layout: header and footer for every page.
+pages: movie-list - returns all movies from database.
+authentication: register - adds new user.
+
 
 -------------------------------------------
 

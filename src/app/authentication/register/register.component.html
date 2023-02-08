@@ -3,12 +3,21 @@
     <h5>Sisesta kasutajanimi ja salasõna lugejaks registreerimiseks</h5>
     <form [formGroup]="userForm" (ngSubmit)="onRegister()">
       <div class="form-group">
+        <label for="name">Nimi</label>
+        <input type="text" id="name" formControlName="name">
+      </div>
+      <div class="form-group">
         <label for="username">Kasutajanimi</label>
         <input type="text" id="username" formControlName="username">
       </div>
       <div class="form-group">
+        <label for="email">Email</label>
+        <input type=email id="email" formControlName="email">
+      </div>
+      <div class="form-group">
         <label for="password">Salasõna</label>
-        <input type="password" id="password" placeholder="vähemalt 6 tähemärki pikk" formControlName="password" minlength="6">
+        <input type="password" id="password" placeholder="vähemalt 6 tähemärki pikk" formControlName="password"
+               minlength="6">
       </div>
       <button type="submit" [disabled]="!userForm.valid">Registreeru</button>
       <h6>Liigu sisselogimise lehele</h6>

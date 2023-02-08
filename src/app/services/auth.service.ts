@@ -1,17 +1,16 @@
 import {HttpClient} from "@angular/common/http";
 import {Injectable} from "@angular/core";
 
-import {UserModel} from "../authentication/user.model";
+import {RegisterModel} from "../authentication/register.model";
 
 @Injectable({providedIn: 'root'})
-export class AuthService{
+export class AuthService {
 
   constructor(private http: HttpClient) {
   }
 
-  register(userModel: UserModel) {
-    userModel.roleName = 'lugeja';
-    this.http.post('http://localhost:8080/user/new', userModel)
+  register(registerModel: RegisterModel) {
+    this.http.post('http://localhost:8080/register', registerModel)
       .subscribe();
   }
 }
