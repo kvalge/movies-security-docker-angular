@@ -16,7 +16,7 @@ import {MovieService} from "./services/movie.service";
 import { RegisterComponent } from './authentication/register/register.component';
 import { LoginComponent } from './authentication/login/login.component';
 import {AuthService} from "./services/auth.service";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -30,14 +30,15 @@ import {ReactiveFormsModule} from "@angular/forms";
     RegisterComponent,
     LoginComponent,
   ],
-  imports: [
-    BrowserModule,
-    RouterOutlet,
-    RouterLinkActive,
-    AppRoutingModule,
-    HttpClientModule,
-    ReactiveFormsModule
-  ],
+    imports: [
+        BrowserModule,
+        RouterOutlet,
+        RouterLinkActive,
+        AppRoutingModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        FormsModule
+    ],
   providers: [DataStorageService, MovieService, AuthService],
   bootstrap: [AppComponent]
 })
